@@ -1,0 +1,264 @@
+home-whats section
+
+<div id="home-whats-new-section">
+<div class="home-section-title d-flex justify-content-between align-items-center mb-3">
+<h5 class="mb-0">What&rsquo;s New</h5>
+<a href="#" class="view-more">View More</a></div>
+<div class="new-item">
+<div class="new-item-icon adm">ADM</div>
+<p class="new-item-title mb-0">Company new</p>
+</div>
+<div class="new-item">
+<div class="new-item-icon adm">ADM</div>
+<p class="new-item-title mb-0">Glendale Academy</p>
+</div>
+<div class="new-item">
+<div class="new-item-icon comms">COMMS</div>
+<p class="new-item-title mb-0">Teacher&rsquo;s Notes</p>
+</div>
+<div class="new-item">
+<div class="new-item-icon comms">COMMS</div>
+<p class="new-item-title mb-0">The New Paper</p>
+</div>
+<div class="new-item">
+<div class="new-item-icon img-icon"></div>
+<p class="new-item-title mb-0">The Big Read</p>
+</div>
+</div>
+
+
+News and announcement
+<script>
+  setTimeout(function () {
+    if ($("#newsCarousel.newsCarousel").length == 0) {
+      $('#newsCarousel').slick({
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        autoplay: false,
+        autoplaySpeed: 2000
+      });
+    }
+  }, 3500);
+</script>
+
+
+<div id="home-news-section">
+  <div class="news-header home-section-title d-flex justify-content-between align-items-center mb-0">
+    <h5>News & Announcements</h5>
+    <a href="/sites/staffportal-dev/SitePages/Announcements.aspx" class="view-more">View More</a>
+  </div>
+  <div id="newsCarousel">{{ItemTemplate}}</div>
+</div>
+
+
+
+
+<div class="col-md-3">
+  <div class="news-card">
+    <div class="news-date momentdate">moment({{PublishedDate}}).format("DD MMM YYYY")</div>
+    <div class="news-title">{{Title}}</div>
+    <a href="{{FileRef}}" class="view-story">View Story <span class="chevron chevron-right fa fa-chevron-right"></span></a>
+  </div>
+</div>
+
+
+
+
+
+Calender
+
+
+
+<script>
+  setTimeout(function () {
+    if ($("#eventCarousel.newsCarousel").length == 0) {
+      $('#eventCarousel').slick({
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        autoplay: false,
+        autoplaySpeed: 2000
+      });
+    }
+  }, 3500);
+</script>
+
+
+
+
+<div id="home-calendar-section">
+  <div class="home-section-title d-flex justify-content-between align-items-center mb-0">
+    <h5>Calendar</h5>
+    <a href="#" class="view-more">View More</a>
+  </div>
+  <div id="eventCarousel">
+    <div class="col-md-2">
+      <div class="event-card">
+        <div class="event-date">3 Oct</div>
+        <div class="event-title">Happy Teacher&rsquo;s Day</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="event-card">
+        <div class="event-date">7 Oct</div>
+        <div class="event-title">Back to School</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="event-card">
+        <div class="event-date">10 Oct</div>
+        <div class="event-title">Senior staff to drive Horizons</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="event-card">
+        <div class="event-date">11 Oct</div>
+        <div class="event-title">Happy Women&rsquo;s Day</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="event-card">
+        <div class="event-date">15 Oct</div>
+        <div class="event-title">Happy Women&rsquo;s Day</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="event-card">
+        <div class="event-date">23 Oct</div>
+        <div class="event-title">Happy Women&rsquo;s Day</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="event-card">
+        <div class="event-date">3 Oct</div>
+        <div class="event-title">Happy Teacher&rsquo;s Day</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="event-card">
+        <div class="event-date">7 Oct</div>
+        <div class="event-title">Back to School</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="event-card">
+        <div class="event-date">10 Oct</div>
+        <div class="event-title">Senior staff to drive Horizons</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="event-card">
+        <div class="event-date">11 Oct</div>
+        <div class="event-title">Happy Women&rsquo;s Day</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="event-card">
+        <div class="event-date">15 Oct</div>
+        <div class="event-title">Happy Women&rsquo;s Day</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="event-card">
+        <div class="event-date">23 Oct</div>
+        <div class="event-title">Happy Women&rsquo;s Day</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+Shortcuts section
+
+<script>
+  setTimeout(function () {
+    $(function () {
+      if ($("#shortcutCarousel.slick-initialized").length == 0) {
+        const $c = $('#shortcutCarousel');
+        const items = $c.children().toArray();
+        const itemsPerPage = 11; // 3x4 grid
+        const pages = [];
+
+        for (let i = 0; i < items.length; i += itemsPerPage) {
+          const chunk = items.slice(i, i + itemsPerPage);
+          const pageIndex = pages.length + 1;
+          console.log("chunk1", chunk)
+          // ✅ For every 3rd slide, ensure last item is "Add Item"
+          console.log("pageIndex", pageIndex)
+
+          const lastItem = $(chunk[chunk.length - 1]);
+          console.log("lastItem", lastItem);
+          // If last item is not already "Add Item", replace it
+          if(!lastItem.hasClass('empty-item') ){
+          if (!lastItem.hasClass('add-item') && lastItem.find('.add-item').length === 0) {
+            chunk[chunk.length] = $('<div class="col-4">' +
+              '<a href="#" class="quick-link-item add-item">' +
+              '<div class="link-text add-icon">+</div>' +
+              '<div class="link-text text-center">Add</div>' +
+              '</a>' +
+              '</div>')[0];
+          }
+
+          while (chunk.length < itemsPerPage) {
+            chunk.push($('<div class="col-4 empty-item"></div>')[0]);
+          }
+        }
+          console.log("chunk", chunk)
+          pages.push(chunk);
+        }
+        console.log("pages", pages)
+        $c.empty();
+        pages.forEach(page => page.forEach(item => $c.append(item)));
+
+        // Initialize Slick
+        $c.slick({
+          slidesToShow: 3,     // 1 full page (12 items)
+          slidesToScroll: 3,
+          rows: 4,             // 4 rows → 3 columns = 12 items
+          dots: true,
+          arrows: true,
+          infinite: false,
+          adaptiveHeight: true
+        });
+      }
+    });
+
+  }, 3500)
+
+</script>
+
+
+
+<section id="home-shortcuts-section">
+  <div class="shortcut-container ps-4">
+    <div class="card quick-links-card p-3">
+      <div class="home-section-title d-flex justify-content-between align-items-center mb-3">
+        <h2 class="mb-0 text-uppercase myapp-heading">My Shortcuts</h2>
+        <a href="/sites/staffportal-dev/SitePages/myapps.aspx" class="edit-button btn btn-sm btn-outline-secondary">
+          Edit
+        </a>
+      </div>
+        <div id="shortcutCarousel">
+            {{ItemTemplate}}
+        </div>
+    </div>
+  </div>
+</section>
+
+
+  <a href="{{#eApps_x003a_URL}}{{eApps_x003a_URL}}{{/eApps_x003a_URL}}{{^eApps_x003a_URL}}#{{/eApps_x003a_URL}}"
+    target="_blank" class="quick-link-item" data-interception="off">
+
+    <div class="icon-circle mb-2 {{^eApps_x003a_IconURL}}bg-fallback{{/eApps_x003a_IconURL}}">
+      <img src="{{eApps_x003a_IconURL}}" alt="Icon" />
+    </div>
+
+    <div class="link-text text-center">{{Title}}</div>
+  </a>
+

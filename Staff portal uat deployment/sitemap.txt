@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Sitemap</title>
+  <style>
+    .sitemap-box {
+      margin-top: 20px;
+    }
+
+    .sitemap-box ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin: 6px 0;
+    }
+
+    .sitemap-box li {
+      margin: 6px 0;
+      line-height: 1.6;
+    }
+
+    .sitemap-box a {
+      text-decoration: none;
+      color: #1a73e8;
+      font-size: 14px;
+    }
+
+    .sitemap-box a:hover {
+      text-decoration: underline;
+    }
+
+    .sitemap-box>ul>li {
+      font-weight: 600;
+      color: #222;
+    }
+
+    .sitemap-box>ul>li>a {
+      font-weight: 600;
+      color: #222;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="sitemapContainer" class="sitemap-box">Loading...</div>
+
+  <script>
+    function loadSitemap() {
+      var fileUrl = _spPageContextInfo.webAbsoluteUrl + "/SiteAssets/SP/sitestructure.txt";
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", fileUrl, true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          try {
+            var items = JSON.parse(xhr.responseText);
+            renderSitemap(items);
+          } catch (err) {
+            document.getElementById("sitemapContainer").innerHTML = "Error parsing sitemap JSON.";
+            console.log(err);
+          }
+        }
+      };
+      xhr.send();
+    }
+
+    function buildTree(items) {
+      var root = {};
+      items.forEach(function (item) {
+        var parts = item.FolderPath ? item.FolderPath.split('/') : [];
+        var current = root;
+        var absoluteUrl = _spPageContextInfo.webAbsoluteUrl + "/SitePages";
+        parts.forEach(function (part) {
+          var decoded = decodeURIComponent(part.trim());
+          absoluteUrl += "/" + decoded;
+          if (!current[decoded]) {
+            current[decoded] = { children: {}, path: absoluteUrl };
+          }
+          current = current[decoded].children;
+        });
+        var decodedName = decodeURIComponent(item.Name);
+        current[decodedName] = { item: item, children: {}, path: item.Path };
+      });
+      return root;
+    }
+
+    function renderTree(node, depth, maxDepth) {
+      if (depth > maxDepth) return null;
+      var ul = document.createElement("ul");
+      var keys = Object.keys(node).sort(function (a, b) {
+        return a.toLowerCase().localeCompare(b.toLowerCase());
+      });
+
+      console.log("SiteMapItems", keys)
+
+      keys.forEach(function (key) {
+        var value = node[key];
+        var li = document.createElement("li");
+        var link = document.createElement("a");
+        link.textContent = key;
+        if (value.item) {
+          link.href = value.item.Path;
+        } else if (value.path) {
+          link.href = value.path + "/";
+        }
+        link.target = "_blank";
+        link.setAttribute("data-interception", "off");
+        li.appendChild(link);
+        var childTree = renderTree(value.children, depth + 1, maxDepth);
+        if (childTree) li.appendChild(childTree);
+        ul.appendChild(li);
+      });
+      return ul;
+    }
+
+    function renderSitemap(items) {
+      var node = buildTree(items);
+      var sitemapContainer = document.getElementById("sitemapContainer");
+      sitemapContainer.innerHTML = "";
+      var domTree = renderTree(node, 1, 4);
+      if (domTree) sitemapContainer.appendChild(domTree);
+    }
+
+    loadSitemap();
+  </script>
+</body>
+
+</html>
