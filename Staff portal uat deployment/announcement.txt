@@ -1,0 +1,37 @@
+<div data-type="Created" data-withindates="true" id="announcements-filter-section">
+    <div id="school-dept-filter-sec">
+      <label for="school">Schools &amp; Departments</label>
+      <select id="school">
+        <option value="opd">OPD</option>
+        
+        
+      </select>
+    </div>
+    <div id="date-filter-sec"><div>
+      <label for="from-date">From Date</label>
+      <input class="datepicker from" type="date" id="from-date" placeholder="DD/MMM/YYYY">
+    </div><div>
+      <label for="to-date">To Date</label>
+      <input class="datepicker to" type="date" id="to-date" placeholder="DD/MMM/YYYY">
+    </div></div>
+    
+  </div>
+
+
+
+<div id="announcement-advisories-section" data-promotedstate="2">
+<table id="announcements-table">
+<thead><th></th></thead>
+<tbody>
+{{ItemTemplate}}
+</tbody>
+</table>
+</div>
+
+
+
+<tr><td><div class="announcement-card">
+    <h3 class="announcement-title"><a href="{{FileRef}}">{{Title}}</a></h3>
+    <p class="announcement-content">{{Description}}</p>
+    <div class="date momentdate">moment({{Created}}).format("DD MMM YYYY")</div>
+  </div></td></tr>

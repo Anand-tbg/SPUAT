@@ -1,0 +1,138 @@
+MY COMPLIMENTS
+
+<script>
+  $('#downloadlist-button').on('click', function () {
+    const listName = "Staff Compliments"; 
+
+    const apiUrl = `https://ttponline.sharepoint.com/sites/staffportal-dev/_api/web/lists/getbytitle('${listName}')/items?$select=SPSComplimentFor/Title,SPSComplimentDetail,SPSDepartment,SPSComplimentingDepartment,Author/Title,Created&$expand=SPSComplimentFor,Author`;
+
+    $.ajax({
+      url: apiUrl,
+      method: "GET",
+      headers: {
+        "Accept": "application/json;odata=verbose"
+      },
+      success: function (data) {
+        console.log("Data", data);
+        const items = data.d.results;
+        if (!items || items.length === 0) {
+          alert("No items found in the list.");
+          return;
+        }
+
+        //headers
+        const headers = [
+          "Compliment For",
+          "Compliment Detail",
+          "Department",
+          "Complimenting Department",
+          "Created By",
+          "Created Date"
+        ];
+
+        const dataRows = [];
+
+        // Loop through items
+        items.forEach(function (item) {
+          const complimentFor = (item.SPSComplimentFor?.Title || "").replace(/\n/g, '\r\n').replace(/"/g, '""').trim();
+          const complimentDetail = (item.SPSComplimentDetail || "").replace(/\n/g, '\r\n').replace(/"/g, '""').trim();
+          const department = (item.SPSDepartment || "").replace(/\n/g, '\r\n').replace(/"/g, '""').trim();
+          const complimentingDept = (item.SPSComplimentingDepartment || "").replace(/\n/g, '\r\n').replace(/"/g, '""').trim();
+          const createdBy = (item.Author?.Title || "").replace(/"/g, '""').trim();
+
+          // Format created date
+          const date = new Date(item.Created);
+          const options = { day: '2-digit', month: 'short', year: 'numeric' };
+          const formattedDate = date.toLocaleDateString('en-GB', options);
+
+          //Push row
+          dataRows.push([
+            `"${complimentFor}"`,
+            `"${complimentDetail}"`,
+            `"${department}"`,
+            `"${complimentingDept}"`,
+            `"${createdBy}"`,
+            `"${formattedDate}"`
+          ]);
+        });
+
+        //Build CSV
+        let csvContent = headers.join(",") + "\n";
+        dataRows.forEach(row => {
+          csvContent += row.join(",") + "\n";
+        });
+
+        // Create & download CSV
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Staff_Compliments_List.csv';
+        a.click();
+        URL.revokeObjectURL(url);
+      },
+      error: function (err) {
+        console.error("Error fetching list items", err);
+        alert("Failed to download data. Please try again.");
+      }
+    });
+  });
+</script>
+
+
+   <h5>My Received Compliments</h5>
+    <div class="mycompliments-table">
+        <table id="received-compliments">
+            <thead>
+                <tr>
+                    <th>Compliment from</th>
+                    <th>Dept</th>
+                    <th>Compliments</th>
+                    <th>Created Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ItemTemplate}}
+            </tbody>
+        </table>
+    </div>
+    <button id="downloadlist-button">Download List</button>
+
+
+
+ <tr>
+        <td class="user-title">{{Author}}</td>
+        <td class="user-department"></td>
+        <td class="message">{{SPSComplimentDetail}}</td>
+        <td class="momentdate created-date">moment({{Created}}).format("DD MMM YYYY")</td>
+    </tr>
+
+
+
+<h5>My Sent Compliments</h5>
+    <div class="mycompliments-table">
+        <table id="sent-compliments">
+            <thead>
+                <tr>
+                    <th>Compliment For</th>
+                    <th>Dept</th>
+                    <th>Compliments</th>
+                    <th>Created Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ItemTemplate}}
+            </tbody>
+        </table>
+    </div>
+
+
+
+   <tr>
+        <td class="user-title">{{SPSComplimentFor}}</td>
+        <td class="user-department"></td>
+        <td class="message">{{SPSComplimentDetail}}</td>
+        <td class="momentdate created-date">moment({{Created}}).format("DD MMM YYYY")</td>
+    </tr>
+
