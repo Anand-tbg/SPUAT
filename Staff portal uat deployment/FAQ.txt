@@ -1,0 +1,94 @@
+<div id="faq-tab-section">
+<div class="nav nav-tabs">
+<table class="" id="faqdatatable">
+<thead class="hidden">
+      <tr>
+        <th class=""></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ItemTemplate}}
+    </tbody>
+  </table>
+</div>
+</div>
+
+
+<tr>
+<td><div class="faq-item-title"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#faq-item-{{ID}}">{{Title}}</div> 
+</td>
+</tr>  
+
+
+
+<script>
+
+  function onclickPagination() {
+    console.log("inside fn")
+    $("#faq-tab-section .paginate_button").click(function () {
+
+      let firstEle = $("#faq-tab-section #faqdatatable tr:first-child .nav-link");
+      console.log("firstEle", firstEle)
+      let currentId = firstEle.attr("data-bs-target");
+      let tabEle = $("#faq-tab-section #faqdatatable tr .nav-link");
+      tabEle.removeClass("active");
+      tabEle.attr("aria-selected", false)
+      firstEle.addClass("active");
+      firstEle.attr("aria-selected", true)
+      console.log("clicked1", firstEle.length, firstEle.attr("data-bs-target"));
+      let contentEle = $("#faq-tab-content-section");
+      contentEle.find(".faq-item-content").removeClass("active");
+      contentEle.find(".faq-item-content").removeClass("show");
+      if (currentId) {
+        contentEle.find(currentId).addClass("active show")
+      }
+      console.log("contentEle", contentEle.attr("class"), currentId);
+      onclickPagination();
+
+    });
+  }
+  setTimeout(function () {
+    onclickPagination()
+  }, 500)
+
+</script>  
+
+
+<div id="faq-tab-content-section" class="tab-content">
+{{ItemTemplate}}
+</div>      
+
+
+
+<div class="faq-item-content tab-pane" id="faq-item-{{ID}}">
+      {{Answer}}
+     
+    </div>  
+
+
+
+
+<script>
+function equalHeights(sel) {
+  const els = [...document.querySelectorAll(sel)];
+  const max = Math.max(...els.map(el => (el.style.height = '', el.offsetHeight)));
+  els.forEach(el => el.style.height = `${max}px`);
+}
+
+  setTimeout(function () {
+    if ($("#newsCarousel.newsCarousel").length == 0) {
+      $('#newsCarousel').slick({
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        autoplay: false,
+        autoplaySpeed: 2000
+      });
+
+equalHeights('#home-news-section .news-card');
+window.addEventListener('resize', () => equalHeights('#home-news-section .news-card'));
+    }
+  }, 3500);
+</script>              
