@@ -1,0 +1,503 @@
+<div class="content-ckeditor">
+    Management of data in universities is a critical task that requires careful planning and execution. With the
+    ever-increasing volume and importance of data in academic institutions, implementing robust data management
+    practices is vital to ensure security, efficiency, and compliance. Proper data management not only safeguards
+    sensitive information but also enhances decision-making processes and enables universities to leverage their data
+    effectively.<br />
+    <br />
+    Click on each tab to learn about the data lifecycle in IHLs.<br />
+    &nbsp;
+    <div class="custom-collapse">
+        <div class="heading">
+            <div aria-expanded="false" class="bt-collapse" data-bs-target="#accordion_248zf2yg5"
+                data-bs-toggle="collapse">+
+            </div>
+
+            <div class="title-collapse"><img alt="" height="46"
+                    src="/sites/staffportal-UAT/PublishingImages/INDT/1New/classify%20copy.gif" width="53" />&nbsp; Data
+                Creation and Collection</div>
+        </div>
+
+        <div class="collapse-content collapse" id="accordion_248zf2yg5" style="">
+            <div class="collapse-text">Lifecycle of data in universities begins with&nbsp;<strong>data creation and
+                    collection</strong>. This phase involves researchers, faculty members, and students generating new
+                data through experiments, surveys, observations, and other academic activities. It is crucial for
+                universities to establish clear guidelines and protocols for data collection to ensure accuracy,
+                completeness, and consistency.</div>
+        </div>
+    </div>
+
+    <div class="custom-collapse">
+        <div class="heading">
+            <div aria-expanded="false" class="bt-collapse" data-bs-target="#accordion_4oxohgv9c"
+                data-bs-toggle="collapse">+
+            </div>
+
+            <div class="title-collapse"><img alt="" height="54"
+                    src="/sites/staffportal-UAT/PublishingImages/INDT/1New/process%20copy.gif" width="54" />&nbsp; Data
+                Storage and Preservation&nbsp;</div>
+        </div>
+
+        <div aria-expanded="true" class="collapse-content collapse" id="accordion_4oxohgv9c" style="">
+            <div class="collapse-text">
+                <p><strong>Data storage and preservation</strong>&nbsp;are fundamental aspects of the data lifecycle in
+                    universities. Proper storage solutions and preservation techniques are vital to maintain the
+                    integrity, security, and accessibility of data. Universities must invest in robust data management
+                    systems, backup procedures, and disaster recovery plans to safeguard valuable research data.</p>
+
+                <p>Universities should implement policies regarding data retention periods, archival processes, and
+                    metadata documentation to facilitate the long-term preservation of research data. Additionally,
+                    regular data audits and monitoring can help ensure compliance with data management best practices
+                    and regulatory requirements.</p>
+                ,<img alt="" height="316"
+                    src="/sites/staffportal-UAT/PublishingImages/INDT/three-states-of-data-1080x675.png" width="506" />
+            </div>
+        </div>
+    </div>
+    <div class="custom-collapse">
+        <div class="heading">
+            <div aria-expanded="false" class="bt-collapse" data-bs-target="#accordion_jav97gz97"
+                data-bs-toggle="collapse">+
+            </div>
+
+            <div class="title-collapse"><img alt="" height="54"
+                    src="/sites/staffportal-UAT/PublishingImages/INDT/1New/collect%20copy.gif" width="54" />&nbsp; Data
+                Use and Sharing&nbsp;</div>
+        </div>
+
+        <div aria-expanded="true" class="collapse-content collapse" id="accordion_jav97gz97" style="">
+            <div class="collapse-text">
+                <p><strong>Sharing data</strong>&nbsp;is an integral part of the data lifecycle in universities,
+                    enabling collaboration, transparency, and reproducibility in research. Universities should promote a
+                    culture of data sharing while also addressing concerns related to data ownership, intellectual
+                    property rights, and data confidentiality.</p>
+
+                <p>It is vital for universities to establish data sharing agreements, data access protocols, and data
+                    sharing platforms to facilitate the responsible and ethical sharing of research data. By promoting
+                    data sharing practices, universities can enhance the impact and relevance of their research outcomes
+                    while upholding data privacy and security standards.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="custom-collapse">
+        <div class="heading">
+            <div aria-expanded="false" class="bt-collapse" data-bs-target="#accordion_vjq5dofvm"
+                data-bs-toggle="collapse">+
+            </div>
+
+            <div class="title-collapse"><span id="cke_bm_1094S" style="display:none;">&nbsp;</span><span
+                    id="cke_bm_1385S" style="display:none;">&nbsp;</span><img alt="" height="46"
+                    src="/sites/staffportal-UAT/PublishingImages/INDT/1New/classify%20copy.gif"
+                    width="53" />&nbsp;&nbsp;Data Archiving and Destruction</div>
+        </div>
+
+        <div aria-expanded="true" class="collapse-content collapse" id="accordion_vjq5dofvm" style="">
+            <div class="collapse-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit,</div>
+        </div>
+    </div>
+
+    <div class="custom-collapse">
+        <div class="heading">
+            <div aria-expanded="false" class="bt-collapse" data-bs-target="#accordion_3fuv4u6em"
+                data-bs-toggle="collapse">+
+            </div>
+
+            <div class="title-collapse"><span id="cke_bm_1248S" style="display:none;">&nbsp;</span><img alt=""
+                    height="54" src="/sites/staffportal-UAT/PublishingImages/INDT/1New/process%20copy.gif"
+                    width="54" />&nbsp;Developing a Data Management Strategy</div>
+        </div>
+
+        <div aria-expanded="true" class="collapse-content collapse" id="accordion_3fuv4u6em" style="">
+            <div class="collapse-text">Once again, developing a data management strategy is crucial for universities to
+                effectively handle their vast amount of data. This strategy serves as a roadmap that guides the
+                institution in organizing, storing, and utilizing data to support various academic and administrative
+                functions.</div>
+        </div>
+    </div>
+
+    <div class="custom-collapse">
+        <div class="heading">
+            <div aria-expanded="false" class="bt-collapse" data-bs-target="#accordion_m6jw9ys0j"
+                data-bs-toggle="collapse">+
+            </div>
+
+            <div class="title-collapse"><img alt="" height="46"
+                    src="/sites/staffportal-UAT/PublishingImages/INDT/1New/classify%20copy.gif" width="53" />&nbsp; Data
+                Classification</div>
+        </div>
+
+        <div aria-expanded="true" class="collapse-content collapse" id="accordion_m6jw9ys0j" style="">
+            <div class="collapse-text">5. You can also refer to the&nbsp;<b>Classification Guide&nbsp;</b>below to aid
+                you in classifying data/documents.&nbsp;Refer to the &quot;Overview&quot; tab for notes on using the
+                spreadsheet.&nbsp;<br />
+                <br />
+                <a href="/sites/staffportal-UAT/DocumentsForSPStaff/OPD/classification.xlsx"><img alt="" height="104"
+                        src="/sites/staffportal-UAT/PublishingImages/INDT/classification1.png" width="384" /></a>
+            </div>
+        </div>
+    </div>
+
+    <p><br />
+        <img alt="" height="60" src="/sites/staffportal-UAT/PublishingImages/INDT/1New/stepbystep_red.png"
+            width="123" />&nbsp;Guide and Checklist For:<br />
+        <br />
+    </p>
+
+    <div class="horizontal-tabs" data-tab-set-title="tab">
+        <ul class="nav nav-tabs tabs-top" role="tablist">
+            <li class="active" role="presentation" style="width:33.33333333333%;"><a aria-controls="tab-tab-1"
+                    aria-selected="false" class="tab-link" data-bs-toggle="tab" href="#tab-tab-1" role="tab">Reporting
+                    Quality Issues&nbsp;</a></li>
+            <li role="presentation" style="width:33.33333333333%;"><a aria-controls="tab-tab-2" aria-selected="false"
+                    class="tab-link" data-bs-toggle="tab" href="#tab-tab-2" role="tab">Data Protection
+                    Checklist&nbsp;</a>
+            </li>
+            <li role="presentation" style="width:33.33333333333%;"><a aria-controls="tab-tab-3" aria-selected="true"
+                    class="tab-link active" data-bs-toggle="tab" href="#tab-tab-3" role="tab">Data Sharing Checklist</a>
+            </li>
+        </ul>
+
+        <div class="tab-content horizontal-tab-content">
+            <div class="tab-pane active" id="tab-tab-1" role="tabpanel">
+                <div class="tab-pane-content">
+                    <div class="step">
+                        <div class="wf-box clearfix">
+                            <p class="wf-title">01</p>
+
+                            <div class="wf-content">
+                                <h3>Notify System Owner Representative</h3>
+
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis molestias in
+                                    delectus! Repellat, delectus. Voluptas saepe impedit, vel maxime a accusantium
+                                    adipisci. Id recusandae illo eaque illum voluptate tempore sunt.</p>
+                            </div>
+                        </div>
+
+                        <div class="arrow-down"></div>
+                    </div>
+
+                    <div class="step">
+                        <div class="wf-box clearfix">
+                            <p class="wf-title">02</p>
+
+                            <div class="wf-content">
+                                <h3>Carry out Investigation</h3>
+
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis molestias in
+                                    delectus! Repellat, delectus. Voluptas saepe impedit, vel maxime a accusantium
+                                    adipisci. Id recusandae illo eaque illum voluptate tempore sunt.</p>
+                            </div>
+                        </div>
+
+                        <div class="arrow-down"></div>
+                    </div>
+
+                    <div class="step">
+                        <div class="wf-box clearfix">
+                            <p class="wf-title">03</p>
+
+                            <div class="wf-content">
+                                <h3>Rectify the Cause&nbsp;</h3>
+
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis molestias in
+                                    delectus! Repellat, delectus. Voluptas saepe impedit, vel maxime a accusantium
+                                    adipisci. Id recusandae illo eaque illum voluptate tempore sunt.</p>
+                            </div>
+                        </div>
+
+                        <div class="arrow-down"></div>
+                    </div>
+
+                    <div class="step">
+                        <div class="wf-box clearfix">
+                            <p class="wf-title">04</p>
+
+                            <div class="wf-content">
+                                <h3>Inform the Users and Update SOR</h3>
+
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis molestias in
+                                    delectus! Repellat, delectus. Voluptas saepe impedit, vel maxime a accusantium
+                                    adipisci. Id recusandae illo eaque illum voluptate tempore sunt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="tab-tab-2" role="tabpanel">
+                <div class="tab-pane-content">
+                    <table border="0" cellspacing="5">
+                        <tbody>
+                            <tr>
+                                <td>☑</td>
+                                <td>Complete the&nbsp;<strong>Basic Digital Literacy: Cyber &amp; Data
+                                        Security</strong>&nbsp;training on&nbsp;<a href="https://www.learn.gov.sg/"
+                                        title="CSC Learn app">CSC Learn app</a>&nbsp;&amp; quiz&nbsp;annually.</td>
+                            </tr>
+                            <tr>
+                                <td>☑</td>
+                                <td>Read, understand and comply with the&nbsp;<a
+                                        href="https://ttponline.sharepoint.com/sites/staffportal-UAT/documentsforspstaff/indt/sp+ict+security+policy+and+standards.pdf"
+                                        target="_blank">SP&nbsp;ICT&nbsp;Security&nbsp;Policy&nbsp;and&nbsp;Standards</a>&nbsp;and
+                                    the&nbsp;<a
+                                        href="https://ttponline.sharepoint.com/sites/staffportal-UAT/documentsforspstaff/indt/sp+ict+acceptable+use+policy+for+staff.pdf"
+                                        target="_blank">SP ICT Acceptable Use Policy for Staff.</a></td>
+                            </tr>
+                            <tr>
+                                <td>☑</td>
+                                <td>Use the data in the IT system primarily for your job and for the purpose that you
+                                    have been authorised</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="tab-tab-3" role="tabpanel">
+                <div class="tab-pane-content">
+                    <table border="0" cellspacing="5">
+                        <tbody>
+                            <tr>
+                                <td>☑</td>
+                                <td>Complete the&nbsp;<strong>Basic Digital Literacy: Cyber &amp; Data
+                                        Security</strong>&nbsp;training on&nbsp;<a href="https://www.learn.gov.sg/"
+                                        title="CSC Learn app">CSC Learn app</a>&nbsp;&amp; quiz&nbsp;annually.</td>
+                            </tr>
+                            <tr>
+                                <td>☑</td>
+                                <td>Read, understand and comply with the&nbsp;<a
+                                        href="https://ttponline.sharepoint.com/sites/staffportal-UAT/documentsforspstaff/indt/sp+ict+security+policy+and+standards.pdf"
+                                        target="_blank">SP&nbsp;ICT&nbsp;Security&nbsp;Policy&nbsp;and&nbsp;Standards</a>&nbsp;and
+                                    the&nbsp;<a
+                                        href="https://ttponline.sharepoint.com/sites/staffportal-UAT/documentsforspstaff/indt/sp+ict+acceptable+use+policy+for+staff.pdf"
+                                        target="_blank">SP ICT Acceptable Use Policy for Staff.</a></td>
+                            </tr>
+                            <tr>
+                                <td>☑</td>
+                                <td>Use the data in the IT system primarily for your job and for the purpose that you
+                                    have been authorised</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<style>
+       #s4-bodyContainer {
+    display: table;
+    width: 100%;
+                  }
+        .col-md-12.fs-main-body {
+    display: block !important;
+    padding: 0px;
+}
+      #DeltaPlaceHolderMain .Body-Appliction::before {
+    content: "";
+    background-image: none;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: auto;
+}
+     #DeltaPlaceHolderMain .Body-Appliction .header-row {
+    margin-bottom: 30px;
+    background-image: url(/_layouts/15/SP.SPS/sps-images/bg_wide.jpg);
+        background-size: 100% 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: auto;
+}
+          #s4-workspace.custom {
+    width: 100% !important;
+}
+    </style>
+    <script type="text/javascript" src="/_layouts/15/SP.SPS/sps-scripts/SPS_Pagelayout.js?v=62.0"></script>
+        <script type="text/javascript" src="/_layouts/15/SP.SPS/sps-scripts/jquery.validate.min.js"></script>
+    <link href="~/_layouts/15/SP.SPS/sps-css/SPSForm.css?v=62.0" rel="stylesheet" />
+
+            
+
+            
+        
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" defer="defer">
+    var spsIsSiteAdmin = false;
+</script>
+<span>
+    <script type="text/javascript" defer="defer">
+        spsIsSiteAdmin = true;
+    </script>
+</span>
+<script type="text/javascript" src="/_layouts/15/SP.SPS/sps-scripts/master.js?v=62.0"></script>
+
+<script src="/_layouts/15/SP.SPS/sps-scripts/html2canvas.js"></script>
+<script src="/_layouts/15/SP.SPS/sps-scripts/jspdf.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" defer="defer">
+    jQuery(document).ready(function () {
+        var ribbon = document.getElementById("s4-ribbonrow");
+        if (spsIsSiteAdmin || (jQuery("input[type='hidden'][id$=hidIsAdmin]").val().toLowerCase() === 'true')) {
+            ribbon.style.display = "block";
+        } else {
+            if (jQuery('#MSOLayout_InDesignMode').val() === '1') {
+                jQuery(".ms-WPAddButton").each(function () {
+                    jQuery(this).removeAttr("onclick");
+                    jQuery(this).addClass("hidden");
+                });
+                jQuery("div[id='MSOZone'").each(function () {
+                    jQuery(this).removeAttr("onclick");
+                    jQuery(this).removeAttr("ondragenter");
+                    jQuery(this).removeAttr("ondragover");
+                });
+                jQuery('div[name="MSOZoneCell"]').each(function () {
+                    jQuery(this).removeAttr("ondragenter");
+                    jQuery(this).removeAttr("ondragend");
+                    jQuery(this).removeAttr("ondragover");
+                    jQuery(this).removeAttr("onkeyup");
+                    jQuery(this).removeAttr("onmouseup");
+                });
+                jQuery('div[id="MSOZone_EmptyZoneCell"]').each(function () {
+                    jQuery(this).removeAttr("ondragover");
+                    jQuery(this).removeAttr("ondragenter");
+                });
+                jQuery("span[id$='_MenuControlBox']").each(function () {
+                    jQuery(this).addClass("hidden");
+                });
+                jQuery(".js-webpart-titleCell").each(function () {
+                    jQuery(this).removeAttr("onmousedown");
+                    jQuery(this).attr("style", "cursor:default");
+                });
+            }
+            if (_spPageContextInfo.pageItemId == null || typeof _spPageContextInfo.pageItemId === "undefined") {
+                if (jQuery("input[type='hidden'][id$=hidIsContributor]").val().toLowerCase() == 'true') {
+                    ribbon.style.display = "block";
+                }
+            }
+        }
+        hideRibbonIfNotAdmin();
+    });
+    function hideRibbonIfNotAdmin() {
+        var isAdmin = jQuery("input[type='hidden'][id$=hidIsAdmin]").val().toLowerCase() == "true";
+        if (!isAdmin && !spsIsSiteAdmin) {
+            var href = window.location.href;
+            if ((href.indexOf("/Lists/News%20Announcement/") > -1) || (href.indexOf("/Pages/Forms/") > -1) || (href.indexOf("/Broken%20Links%20Report/Forms/") > -1) || (href.indexOf("/Access%20Control%20Report/Forms/") > -1) || (href.indexOf("/Content%20Review%20Report/Forms/") > -1) || (href.indexOf("/Lists/Deleted%20Mirror%20Page%20Report/") > -1)) {
+                jQuery("#s4-ribbonrow").hide();
+            }
+        }
+
+    }
+    SP.SOD.executeFunc("sp.js", "SP.ClientContext", null);
+</script>
+
+        <style type="text/css">
+            @media print {
+                #demo {
+                    display: none !important;
+                }
+                body {
+                     font-family: "Poppins Regular" !important;
+                }
+            }
+        </style>
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery("#exampleModal").on('hide.bs.modal', function () {
+                    jQuery(".Divgotop").css("visibility", "visible");
+                    jQuery("#rightNavigation-page").css("visibility", "visible");
+                    jQuery(".st-carousel-indicators > li").css("border-radius", "50%");
+                    jQuery(".mq-carousel-indicators > li").css("border-radius", "50%");
+                });
+            });
+            var divHeight = jQuery("#contentRow").height();
+            var divWidth = jQuery("#contentRow").width();
+            var ratio = divHeight / divWidth;
+            function saveImg() {
+                jQuery(".Divgotop").css("visibility", "hidden");
+                jQuery("#rightNavigation-page").css("visibility", "hidden");
+                jQuery(".st-carousel-indicators > li").css("border-radius", "0");
+                jQuery(".mq-carousel-indicators > li").css("border-radius", "0");
+                html2canvas(jQuery("#contentRow"), {
+                    onrendered: function (canvas) {
+                        var imgbase = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+                        var imgpdf = canvas.toDataURL("image/jpeg");
+                        jQuery("#Imgpreview").attr("src", imgbase);
+                    }
+                });
+            };
+            function saveAsPDF() {
+                jQuery(".Divgotop").css("visibility", "hidden");
+                jQuery("#rightNavigation-page").css("visibility", "hidden");
+                jQuery(".st-carousel-indicators > li").css("border-radius", "0");
+                jQuery(".mq-carousel-indicators > li").css("border-radius", "0");
+                var text = jQuery('#contentRow').text();
+                var l = {
+                    orientation: 'l',
+                    unit: 'pt',
+                    format: 'a4',
+                    compress: true,
+                    fontSize: 8,
+                    lineHeight: 1,
+                    autoSize: false,
+                    printHeaders: true
+                }
+                var pdf = new jsPDF(l, '', '', '');
+                var options = {
+                    pagesplit: true
+                };
+                pdf.internal.scaleFactor = 2.25;
+                var title = document.title;
+                var newtitle = title.split(' ').join('_');
+                pdf.addHTML(jQuery('#contentRow'), options, function () {
+                    pdf.save(title + ".pdf");
+                });
+            }
+            function closepdf() {
+                jQuery(".Divgotop").css("visibility", "visible");
+                jQuery("#rightNavigation-page").css("visibility", "visible");
+                jQuery(".st-carousel-indicators > li").css("border-radius", "50%");
+                jQuery(".mq-carousel-indicators > li").css("border-radius", "50%");
+            }
+        </script>
+    <style type="text/css">
+	.s4-skipribbonshortcut { display:none; }
+
+</style>
