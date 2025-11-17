@@ -1,0 +1,95 @@
+<script>
+function equalHeights(sel) {
+  const els = [...document.querySelectorAll(sel)];
+  const max = Math.max(...els.map(el => (el.style.height = '', el.offsetHeight)));
+  els.forEach(el => el.style.height = `${max}px`);
+}
+  setTimeout(function () {
+    $(function () {
+      if ($("#shortcutCarousel.slick-initialized").length == 0) {
+        const $c = $('#shortcutCarousel');
+        const items = $c.children().toArray();
+        const itemsPerPage = 11; // 3x4 grid
+        const pages = [];
+
+        for (let i = 0; i < items.length; i += itemsPerPage) {
+          const chunk = items.slice(i, i + itemsPerPage);
+          const pageIndex = pages.length + 1;
+          console.log("chunk1", chunk)
+          // ✅ For every 3rd slide, ensure last item is "Add Item"
+          console.log("pageIndex", pageIndex)
+
+          const lastItem = $(chunk[chunk.length - 1]);
+          console.log("lastItem", lastItem);
+          // If last item is not already "Add Item", replace it
+          if(!lastItem.hasClass('empty-item') ){
+          if (!lastItem.hasClass('add-item') && lastItem.find('.add-item').length === 0) {
+            chunk[chunk.length] = $('<div class="col-4">' +
+              '<a href="#" class="quick-link-item add-item">' +
+              '<div class="link-text add-icon">+</div>' +
+              '<div class="link-text text-center">Add</div>' +
+              '</a>' +
+              '</div>')[0];
+          }
+
+          while (chunk.length < itemsPerPage) {
+            chunk.push($('<div class="col-4 empty-item"></div>')[0]);
+          }
+        }
+          console.log("chunk", chunk)
+          pages.push(chunk);
+        }
+        console.log("pages", pages)
+        $c.empty();
+        pages.forEach(page => page.forEach(item => $c.append(item)));
+
+        // Initialize Slick
+        $c.slick({
+          slidesToShow: 3,     // 1 full page (12 items)
+          slidesToScroll: 3,
+          rows: 4,             // 4 rows → 3 columns = 12 items
+          dots: true,
+          arrows: true,
+          infinite: false,
+          adaptiveHeight: true
+        });
+      }
+    });
+equalHeights('#home-shortcuts-section .quick-link-item');
+window.addEventListener('resize', () => equalHeights('#home-shortcuts-section .quick-link-item'));
+  }, 4000)
+
+</script>
+
+
+
+<section id="home-shortcuts-section">
+  <div class="shortcut-container ps-4">
+    <div class="card quick-links-card p-3">
+      <div class="home-section-title d-flex justify-content-between align-items-center mb-3">
+        <h2 class="mb-0 text-uppercase myapp-heading">My Quick Links</h2>
+        <a href="/sites/staffportal-dev/SitePages/myapps.aspx" class="edit-button btn btn-sm btn-outline-secondary">
+          Edit
+
+        </a>
+      </div>
+        <div id="shortcutCarousel">
+            {{ItemTemplate}}
+        </div>
+    </div>
+  </div>
+</section>
+
+<a href="{{#SP_x0020_Application_x003a_SP_x00}}{{SP_x0020_Application_x003a_SP_x00}}{{/SP_x0020_Application_x003a_SP_x00}}{{^SP_x0020_Application_x003a_SP_x00}}#{{/SP_x0020_Application_x003a_SP_x00}}"
+  target="_blank" class="quick-link-item" data-interception="off">
+
+  <div class="icon-circle mb-2 {{^SP_x0020_Application_x003a_SP_x01}}bg-fallback{{/SP_x0020_Application_x003a_SP_x01}}">
+    <img src="{{SP_x0020_Application_x003a_SP_x01}}" alt="Icon" />
+  </div>
+
+  <div class="link-text text-center">{{Title}}</div>
+</a>
+
+
+
+
