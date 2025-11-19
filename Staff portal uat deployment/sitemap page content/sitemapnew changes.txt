@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic SharePoint Sitemap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+    .sitemap-box {
+      margin-top: 20px;
+    }
+
+ 
+  </style>
+</head>
+
+<body class="bg-light">
+  <div class="container">    
+    <div id="sitemapContainer">Loading...</div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function loadSitemap() {
+      var fileUrl = _spPageContextInfo.webAbsoluteUrl + "/SiteAssets/SP/sitestructure.txt";
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", fileUrl, true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          try {
+            var items = JSON.parse(xhr.responseText);
+            renderSitemap(items);
+          } catch (err) {
+            document.getElementById("sitemapContainer").innerHTML = "Error parsing sitemap JSON.";
+            console.error(err);
+          }
+        }
+      };
+      xhr.send();
+    }
+
+    function renderSitemap(jsonData) {
+      // Group by top-level folder (e.g., Corporate, spvine)
+      const grouped = {};
+      jsonData.forEach(item => {
+        const parts = item.FolderPath.split('/');
+        const topFolder = parts[0];
+        if (!grouped[topFolder]) grouped[topFolder] = [];
+        grouped[topFolder].push(item);
+      });
+
+      // Build HTML
+      let html = '<div class="row sitemap-sec">';
+      Object.keys(grouped).forEach((folder, index) => {
+        const collapseId = `collapse-${index}`;
+        html += `
+          <div class="col-md-4 map-item-col">
+            <div class="map-item">
+              <div class="wrap-item">
+                <div class="item-heading">
+                  <h4 class="map-title">${decodeURI(htmlEncode(folder))}</h4>
+                  <a role="button" data-bs-toggle="collapse" href="#${collapseId}" aria-expanded="true"
+                    aria-controls="${collapseId}" class="button-expand hidden-sm hidden-xs">Collapse</a>
+                  <a role="button" data-bs-toggle="collapse" href="#${collapseId}" aria-expanded="true"
+                    aria-controls="${collapseId}" class="button-expand-mb hidden-md hidden-lg">
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                  </a>
+                </div>
+                <div id="${collapseId}" class="panel-collapse collapse show" role="tabpanel">
+        `;
+
+        // Sub-group within each folder (e.g., Service Excellence)
+        const subGroups = {};
+        grouped[folder].forEach(item => {
+          const parts = item.FolderPath.split('/');
+          const subFolder = parts.slice(1).join('/') || folder;
+          if (!subGroups[subFolder]) subGroups[subFolder] = [];
+          subGroups[subFolder].push(item);
+        });
+
+        function htmlEncode(str) {
+  if (!str) return "";
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+        Object.keys(subGroups).forEach(subFolder => {
+          html += `<ul class="main-list"><li><h4>${decodeURI(htmlEncode(subFolder))}</h4><ul class="sub-list clearfix">`;
+          subGroups[subFolder].forEach(link => {
+            html += `
+              <li>
+                <i class="fa fa-minus" aria-hidden="true"></i>
+                <a href="${link.Path}" target="_blank">${link.Name}</a>                
+              </li>
+            `;
+          });
+          html += `</ul></li></ul>`;
+        });
+
+        html += `
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      html += '</div>';
+      document.getElementById("sitemapContainer").innerHTML = html;
+    }
+
+    // Initialize
+    loadSitemap();
+  </script>
+</body>
+</html>
+
+
+ <link rel="stylesheet" type="text/css" href="/sites/staffportal-dev/SiteAssets/SP/css/cid.css" />
+
+
+
