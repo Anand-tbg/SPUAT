@@ -1,0 +1,28 @@
+/*for site map page*/
+#sitemapContainer a {
+    text-decoration: none !important;
+    word-break: break-word;
+}
+
+#sitemapContainer .map-item h4:not(.map-title) {
+    color: #337ab7 !important;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#sitemapContainer  .map-item .sub-list > li > .fa {
+    font-size: 8px;
+    top: 6px;
+    margin-top: 8px;
+}
+
+#sitemapContainer {
+    padding-top: 100px;
+}
+
+#sitemapContainer .col-md-4.map-item-col {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*end for site map page*/
