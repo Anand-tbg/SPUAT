@@ -1,0 +1,61 @@
+(async () => {
+
+    const listName = "Staff Compliments";
+    const siteUrl = "https://ttponline.sharepoint.com/sites/staffportal-dev";
+
+    // STEP 1 — Get Form Digest
+    async function getDigest() {
+        const res = await fetch(`${siteUrl}/_api/contextinfo`, {
+            method: "POST",
+            headers: {
+                "Accept": "application/json;odata=verbose"
+            }
+        });
+
+        const json = await res.json();
+        return json.d.GetContextWebInformation.FormDigestValue;
+    }
+
+    const digest = await getDigest();
+    console.log("Digest received:", digest);
+
+    // STEP 2 — Fetch first 500 oldest items
+    const fetchUrl =
+        `${siteUrl}/_api/web/lists/getbytitle('${listName}')/items` +
+        `?$select=Id,Created` +
+        `&$orderby=Created asc` +
+        `&$top=1`;
+
+    const fetchRes = await fetch(fetchUrl, {
+        headers: { "Accept": "application/json;odata=verbose" }
+    });
+
+    const fetchJson = await fetchRes.json();
+    const items = fetchJson.d.results;
+
+    console.log("Items found:", items);
+
+    if (!items || items.length === 0) {
+        console.log("No items to delete.");
+        return;
+    }
+
+    // STEP 3 — Move items to Recycle Bin using Recycle()
+    for (const item of items) {
+        console.log("Recycling Item ID:", item.Id, "Created:", item.Created);
+
+        await fetch(
+            `${siteUrl}/_api/web/lists/getbytitle('${listName}')/items(${item.Id})/Recycle()`,
+            {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json;odata=verbose",
+                    "X-RequestDigest": digest
+                }
+            }
+        );
+    }
+
+    console.log("DONE — Items moved to recycle bin.");
+
+})();
